@@ -1,0 +1,20 @@
+<h2>Sign-in Using Template Driven Forms</h2>
+<div class="container">
+    <form #signInForm="ngForm" (ngSubmit)="loginUser(signInForm)">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="emailAddress" ngModel autocomplete="off" email #emailAddress="ngModel" required>
+            <small class="text-danger" *ngIf="emailAddress.touched && !emailAddress.valid">Enter a valid email address</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="passwordField" ngModel autocomplete="off" #passwordField="ngModel" required>
+            <small class="text-danger" *ngIf="passwordField.touched && !passwordField.valid">Enter a valid Password</small>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="termsField" ngModel required>
+            <label class="form-check-label" for="exampleCheck1">Agree To Terms</label>
+        </div>
+        <button type="submit" class="btn btn-primary"[disabled]="!signInForm.valid">Submit</button>
+    </form>
+</div>
