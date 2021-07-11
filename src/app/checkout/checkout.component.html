@@ -33,6 +33,10 @@
         <div class="form-group row">
           <div class="col-sm-10">
             <button type="submit" class="btn btn-primary" (click)="checkout()" [disabled]="!checkoutForm.valid">Checkout</button>
+            <button type="submit" class="btn btn-primary ml-3" (click)="edit()" >Edit</button>
+            <button type="submit" class="btn btn-primary ml-3" (click)="clear()" >Clear</button>
+            <button type="submit" class="btn btn-primary ml-3" (click)="editPatch()" >Patch</button>
+
           </div>
         </div>
       </form>
