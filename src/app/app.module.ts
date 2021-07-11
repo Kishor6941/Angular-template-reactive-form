@@ -4,16 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
-import { FormsModule } from '@angular/forms';
-@NgModule({
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CheckoutComponent } from './checkout/checkout.component';
+ @NgModule({
   declarations: [
     AppComponent,
-    SigninComponent
+    SigninComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

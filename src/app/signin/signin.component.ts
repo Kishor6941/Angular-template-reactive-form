@@ -14,6 +14,7 @@ export class SigninComponent implements OnInit {
   }
   loginUser(signInForm : NgForm) {
 console.log(signInForm.value,'test');
+console.log(signInForm,'test');
 
   }
 }

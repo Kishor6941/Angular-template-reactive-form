@@ -1,0 +1,39 @@
+<div class="container">
+    <h4 class="pb-2">Checkout Form - Using Reactive Form</h4>
+    <form [formGroup] = "checkoutForm">
+        <!-- [formGroup] = "checkoutForm" -->
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" formControlName="emailAddress">
+          </div>
+        </div>
+        <div class="form-group row pb-2">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Quantity</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputPassword3" formControlName="quantity">
+           
+            <div *ngIf="checkoutForm.controls['quantity'].invalid && (checkoutForm.controls['quantity'].dirty || checkoutForm.controls['quantity'].touched)">
+                <div id="rack_name_error" *ngIf="checkoutForm.controls['quantity'].errors.required" class="text-danger" translate>Rack name is required</div>
+        </div>
+    </div>
+        </div>
+        
+        <div class="form-group row">
+          <!-- <div class="col-sm-2">Checkbox</div> -->
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1" formControlName="terms">
+              <label class="form-check-label" for="gridCheck1">
+                Agree To Terms
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary" (click)="checkout()" [disabled]="!checkoutForm.valid">Checkout</button>
+          </div>
+        </div>
+      </form>
+</div>
