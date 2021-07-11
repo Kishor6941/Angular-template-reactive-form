@@ -34,7 +34,15 @@ export class CheckoutComponent implements OnInit {
  
   }
   checkout() {
-    console.log(this.checkoutForm.value);
+    console.log(this.checkoutForm);  // all formData
+    console.log(this.checkoutForm.value); //form values
+    let quantity = this.checkoutForm.get('quantity').value // get specific value from form
+console.log("testdata",quantity);
+
+this.checkoutForm.valueChanges.subscribe(data => { //value changes control or form value data
+  console.log(data,'valuechanges');
+  
+})
     
     
   }
