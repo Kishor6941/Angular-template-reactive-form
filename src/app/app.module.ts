@@ -8,13 +8,15 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ViewChildExampleComponent } from './view-child-example/view-child-example.component';
 import { ViewchildChildComponent } from './view-child-example/viewchild-child/viewchild-child.component';
+import { FormArrayPracticeComponent } from './form-array-practice/form-array-practice.component';
  @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
     CheckoutComponent,
     ViewChildExampleComponent,
-    ViewchildChildComponent
+    ViewchildChildComponent,
+    FormArrayPracticeComponent
   ],
   imports: [
     BrowserModule,
