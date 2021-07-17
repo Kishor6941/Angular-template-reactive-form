@@ -6,8 +6,8 @@
     <p #message>This is important messsage2</p>
 
      <p>Counter {{childview?.counter}}</p>
-    <button (click)="inc()">Increment Counter</button>
-    <button (click)="dec()">Decrement Counter</button>
+    <button class="btn btn-success" (click)="inc()">Increment Counter</button>
+    <button class="btn btn-danger" (click)="dec()">Decrement Counter</button>
     <app-viewchild-child #childview></app-viewchild-child>
-
+    <button class="btn btn-info" type="button" routerLink="/">Back</button>
 </div>
