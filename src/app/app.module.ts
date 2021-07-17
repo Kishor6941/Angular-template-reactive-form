@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ViewChildExampleComponent } from './view-child-example/view-child-example.component';
+import { ViewchildChildComponent } from './view-child-example/viewchild-child/viewchild-child.component';
  @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ViewChildExampleComponent,
+    ViewchildChildComponent
   ],
   imports: [
     BrowserModule,

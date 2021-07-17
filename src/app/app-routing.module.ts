@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SigninComponent } from './signin/signin.component';
+import { ViewChildExampleComponent } from './view-child-example/view-child-example.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,9 @@ const routes: Routes = [
   },
   {
     path: 'checkout', component:CheckoutComponent
+  },
+  {
+    path: 'view-child', component:ViewChildExampleComponent
   },
   {
     path: '**', component:PageNotFoundComponent
